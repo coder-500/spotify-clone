@@ -60,7 +60,7 @@ const displayAlbum = async () => {
                     class="rounded pl-img">
 
                     <button title="play-button" type="button"
-                    class="play first-song-play flex item-center justify-center pointer"><img src="../../assets/play.svg"
+                    class="play first-song-play flex item-center justify-center pointer"><img src="../assets/play.svg"
                         alt="play-icon" class="card-play-icon"></button>
             </div>
                 <div class="txt">
@@ -170,7 +170,7 @@ const songNameFormatter = (songs = undefined) => {
     return { song, artist }
 }
 
-const musicImg = "../../assets/music.svg"
+const musicImg = "../assets/music.svg"
 
 // Add audio in the library section
 const addAudioCard = (songs, img = musicImg) => {
@@ -213,17 +213,17 @@ const togglePlay = async (clickedCard = undefined) => {
     // playingGif(clickedCard)
     if (currentAudio.paused) {
         await currentAudio.play()
-        play.src = '../../assets/pause.svg'
+        play.src = '../assets/pause.svg'
         play.parentElement.title = 'Pause'
-        sidebarPlay.src = '../../assets/pause.svg'
+        sidebarPlay.src = '../assets/pause.svg'
         sidebarPlay.parentElement.title = 'Pause'
         check = true
     }
     else {
         currentAudio.pause()
-        play.src = '../../assets/play.svg'
+        play.src = '../assets/play.svg'
         play.parentElement.title = 'Play'
-        sidebarPlay.src = '../../assets/play.svg'
+        sidebarPlay.src = '../assets/play.svg'
         sidebarPlay.parentElement.title = 'Play'
         check = false
     }
@@ -242,7 +242,7 @@ const playingGif = async (clickedCard) => {
         // })
         let songIndex = songs.indexOf(lastPlayingData.lastPlayingSong)
         console.log(songIndex);
-        clickedCard.lastElementChild.innerHTML = '<img src="../../assets/playing.gif" alt="playing icon">'
+        clickedCard.lastElementChild.innerHTML = '<img src="../assets/playing.gif" alt="playing icon">'
 
         // console.log(currentSongIndex)
         // console.log(Array.from(document.querySelector('.audio-card-container').children)[0]);
@@ -297,7 +297,7 @@ const handleSongInfo = (img = musicImg) => {
     currentAudio.addEventListener('timeupdate', () => {
 
         if (currentAudio.currentTime == currentAudio.duration) {
-            play.src = '../../assets/play.svg'
+            play.src = '../assets/play.svg'
             play.parentElement.title = 'Play'
             currentAudio.currentTime = 0
             nextSong()
@@ -355,16 +355,16 @@ const handleSongInfo = (img = musicImg) => {
 const volHandler = (sliderVal) => {
     currentAudio.volume = sliderVal
     if (sliderVal >= 0.70) {
-        document.querySelector('.volume-button>button>img').src = "../../assets/volume.svg"
+        document.querySelector('.volume-button>button>img').src = "../assets/volume.svg"
     }
     else if (sliderVal >= 0.35 && sliderVal < 0.70) {
-        document.querySelector('.volume-button>button>img').src = "../../assets/volume2.svg"
+        document.querySelector('.volume-button>button>img').src = "../assets/volume2.svg"
     }
     else if (sliderVal > 0 && sliderVal < 0.35) {
-        document.querySelector('.volume-button>button>img').src = "../../assets/volume3.svg"
+        document.querySelector('.volume-button>button>img').src = "../assets/volume3.svg"
     }
     else {
-        document.querySelector('.volume-button>button>img').src = "../../assets/volume4.svg"
+        document.querySelector('.volume-button>button>img').src = "../assets/volume4.svg"
     }
 }
 
