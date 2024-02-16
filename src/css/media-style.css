@@ -1,0 +1,279 @@
+@media screen and (max-width: 1525px) {
+  .playlist-name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .left {
+    position: absolute;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%);
+    width: 70%;
+    z-index: 1;
+    background-color: #000;
+  }
+  .hamburger {
+    display: block;
+    opacity: 1;
+  }
+  .cross {
+    display: block;
+  }
+  .right {
+    width: 100vw;
+  }
+  .play {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .left {
+    width: 100%;
+  }
+  .card-container {
+    padding: 0 1rem;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .card {
+    width: 6rem;
+    padding: 0.5rem;
+  }
+  .card > * {
+    padding-top: 0.3rem;
+  }
+  .card-img {
+    width: 6rem;
+  }
+  .play {
+    display: none;
+  }
+  .currently-playing-album {
+    position: unset;
+  }
+  .play-bar {
+    z-index: 2;
+  }
+
+  .btn-container {
+    gap: 0.5rem;
+  }
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    width: 6rem;
+  }
+  .btn-lg:hover {
+    font-size: 1rem;
+  }
+  .btn-bg-transparent {
+    font-size: 0.7rem;
+  }
+  .desc {
+    display: none;
+  }
+  .song-playing {
+    gap: 0.2rem;
+  }
+  .song-playing > pl-img {
+    width: 3rem;
+  }
+  .play-control {
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 10%;
+  }
+  .controls {
+    gap: 1rem;
+  }
+  .control-btn-play {
+    width: 30px;
+    height: 30px;
+  }
+  #play {
+    width: 21px;
+  }
+  .control-icon {
+    width: 14px;
+  }
+  .play-bar {
+    padding: 0.3rem 0.3rem 1rem;
+  }
+
+  .progress-bar {
+    gap: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.5rem;
+    width: 97vw;
+  }
+  .seek-bar-container {
+    width: 98%;
+  }
+
+  .sName,
+  .sArtist {
+    display: none;
+  }
+  .progress,
+  .duration {
+    display: none;
+  }
+  .song-playing {
+    width: 25%;
+  }
+  .volume-button {
+    justify-content: center;
+  }
+
+  /* Volume slider */
+
+  /*Chrome*/
+  .range {
+    position: relative;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type="range"] {
+      overflow: hidden;
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: #b3b3b383;
+      height: 4px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #ffffff;
+      margin-top: -1px;
+    }
+    input[type="range"]:hover::-webkit-slider-thumb {
+      box-shadow: -80px 0 0 80px #ffffff;
+      width: 10px;
+      height: 10px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      width: 2px;
+      -webkit-appearance: none;
+      height: 2px;
+      background-color: #fff;
+      box-shadow: -80px 0 0 80px #ffffff;
+      border-radius: 50%;
+    }
+  }
+  /** FF*/
+  input[type="range"]::-moz-range-thumb {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+
+  input[type="range"]::-moz-range-progress {
+    background-color: #ffffff;
+  }
+
+  input[type="range"]:hover::-moz-range-progress {
+    background-color: #ffffff;
+  }
+  input[type="range"]::-moz-range-track {
+    background-color: #b3b3b383;
+  }
+  /* IE*/
+  input[type="range"]::-ms-fill-lower {
+    background-color: #ffffff;
+  }
+  input[type="range"]:hover::-ms-fill-lower {
+    background-color: #ffffff;
+  }
+  input[type="range"]::-ms-fill-upper {
+    background-color: #b3b3b383;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .vol-control {
+    display: none;
+  }
+  .song-playing {
+    width: 50%;
+  }
+  .play-control {
+    width: 50%;
+  }
+  .right-nav {
+    justify-content: flex-start;
+  }
+  .left-arrow,
+  .right-arrow {
+    display: none;
+  }
+
+  .playlist {
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .playlist > h1 {
+    padding: 1rem 0;
+  }
+  .card-container {
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.3rem;
+    gap: 0.7rem;
+    height: 80%;
+  }
+  .card {
+    margin: 3px;
+    /* padding: 2rem; */
+    width: 90%;
+  }
+  .card > * {
+    padding: 0.3rem 0;
+  }
+  .card-img {
+    width: 90%;
+  }
+  .play {
+    display: none;
+  }
+  .playlist-name {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 22px;
+    margin-bottom: 0.3rem;
+  }
+
+  .collection {
+    height: 70%;
+  }
+}
+
+.sliding-header {
+  width: 7rem;
+  line-height: 50px;
+  white-space: nowrap;
+  animation: slide 7s linear infinite;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

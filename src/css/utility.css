@@ -1,0 +1,130 @@
+/* Border */
+.border {
+  border: 2px solid tomato;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+/* Flexbox */
+.flex {
+  display: flex;
+}
+.fd-col {
+  flex-direction: column;
+}
+.item-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-btw {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+.g-1 {
+  gap: 0.7rem;
+}
+.g-2 {
+  gap: 1rem;
+}
+
+/* Color */
+.invert {
+  filter: invert(1);
+}
+
+.bg-grey {
+  background-color: #121212;
+}
+
+/* Margin and Padding */
+
+.m-1 {
+  margin: 0.5rem;
+}
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.mr-1 {
+  margin-right: 0.5rem;
+}
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.pd-1 {
+  padding: 0.7rem;
+}
+
+.pd-2 {
+  padding: 1rem;
+}
+.pd-3 {
+  padding: 1.4rem;
+}
+.pd-l-3 {
+  padding-left: 1.3rem;
+}
+.pd-r-3 {
+  padding-right: 1.3rem;
+}
+.pd-t-3 {
+  padding-top: 1.3rem;
+}
+.pd-b-3 {
+  padding-bottom: 1.3rem;
+}
+/* Width & height */
+.icon-width-1 {
+  width: 24px;
+}
+
+.icon-width-2 {
+  width: 16px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* custom Scroll bar */
+.scroll {
+  overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(92, 92, 92);
+  outline: 1px solid rgb(92, 92, 92);
+}
+
+/* Customised anchor */
+.a-tag {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.a-tag-hover:hover {
+  text-decoration: underline;
+}
+
+/* Font Weight */
+.fw-500 {
+  font-weight: 500;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Spotify - Music for everyone</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media-style.css">
+</head>
+
+<body>
+    <main class="flex">
+        <section class="left">
+            <header>
+
+                <nav class="left-nav rounded m-1 pd-1 bg-grey">
+                    <div class="flex justify-space-btw item-center">
+                        <a href="/src/index.html" class="a-tag logo"> <img src="../assets/logo.svg" alt="brand-logo"
+                                class="invert"></a>
+
+                        <div class="cross pointer">
+                            <img src="../assets/cross.svg" alt="close-icon" class="invert icon-width-1">
+                        </div>
+                    </div>
+                    <ul class="navigation">
+                        <li class="li-items flex item-center pd-1 g-2">
+                            <img src="../assets/home.svg" alt="home-icon" class="invert icon-width-1"><a
+                                href="/src/index.html" class="a-tag a-tag-hover">
+                                Home</a>
+                        </li>
+                        <li class="li-items flex item-center pd-1 g-2">
+                            <img src="../assets/search.svg" alt="search-icon" class=" icon-width-1"><a
+                                href="/src/index.html" class="a-tag a-tag-hover">
+                                Search</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="sidebar rounded m-1 bg-grey">
+                <div class="library-section pd-1 flex item-center justify-space-btw bg-grey">
+                    <div class="library-label flex item-center pd-1 g-1 pointer">
+                        <img src="../assets/library.svg" alt="playlist-icon" class=" icon-width-1">
+                        <span><a href="/src/index.html" class="a-tag a-tag-hover"> Your Library</a></span>
+                    </div>
+                    <!-- <div class="create-playlist pointer flex item-center justify-center create-icon">
+                        <button type="button" class="control-btn pointer">
+                            <img src="../assets/add.svg" alt="plus-icon" class=" icon-width-2 ">
+                        </button>
+                    </div> -->
+                    <div class="">
+                        <button title="play-button" type="button"
+                            class="flex item-center justify-center pointer sidebar-play-button">
+                            <img src="../assets/play.svg" alt="play-icon">
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="collection scroll">
+                    <ul class="audio-card-container"></ul>
+                </div>
+
+                <!-- <div class="footer flex item-center">
+                    <button type="button" class="btn lang-sel flex item-center"><span><img src="../assets/globe.svg"
+                                alt="globe-icon" class="invert icon-width-2 "></span>English</button>
+                </div> -->
+            </div>
+        </section>
+
+
+        <section class="right rounded">
+            <nav class="right-nav flex item-center justify-space-btw">
+                <div class="arrows">
+                    <ul class="flex item-center pd-3 g-2">
+                        <li class="li-items flex item-center justify center hamburger"><img
+                                src="../assets/hamburger.svg" alt="menu-icon" class="invert icon-width-1">
+                        </li>
+                        <li class="li-items bg-circle flex item-center justify-center left-arrow">
+                            <a href="/src/index.html" class="a-tag">
+                                <img src="../assets/arrow-left.svg" alt="left-arrow" class=" icon-width-2">
+                            </a>
+                        </li>
+                        <li class="li-items bg-circle flex item-center justify-center right-arrow">
+                            <a href="/src/index.html" class="a-tag">
+                                <img src="../assets/arrow-right.svg" alt="left-arrow" class=" icon-width-2">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="btn-container flex justify-center item-center g-1">
+                    <div class="seperator"></div>
+                    <a href="/src/index.html" type="submit" class="btn btn-bg-transparent a-tag">Sign up</a>
+                    <a href="/src/index.html" type="submit" class="btn btn-lg a-tag flex item-center justify-center">Log
+                        in</a>
+                </div>
+            </nav>
+
+
+            <div class="playlist rounded bg-grey">
+                <h1 class="title bg-grey">Spotify Playlists</h1>
+                <div class="card-container flex item-center scroll">
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="play-bar pd-1">
+            <div class="play-container flex justify-space-btw item-center">
+
+
+
+                <div class="song-playing flex item-center g-2">
+                    <div class="song-img">
+                        <img src="" alt="cover" class="pl-img">
+                    </div>
+                    <div class="song-info playbar-song-info">
+                        <h3 class="sName"></h3>
+                        <p class="sArtist"></p>
+                    </div>
+                </div>
+
+
+
+                <div class="play-control flex fd-col item-center justify-center g-1">
+                    <div class="controls flex justify-center item-center">
+                        <div class="left-control">
+                            <button title="Previous Song" type="button" class="control-btn" id="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img"
+                                    aria-hidden="true" viewBox="0 0 16 16" class="control-icon icon-width-2">
+                                    <path
+                                        d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="play-pause flex item-center justify-center">
+                            <button title="Play" type="button" class="control-btn control-btn-play">
+                                <img src="../assets/play.svg" alt="play-icon" id="play"
+                                    class="play-icon icon-width-1 control-icon-play">
+                            </button>
+                        </div>
+
+                        <div class="right-control">
+                            <button title="Next Song" type="button" class="control-btn " id="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img"
+                                    aria-hidden="true" viewBox="0 0 16 16" class="control-icon icon-width-2">
+                                    <path
+                                        d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar flex item-center">
+                        <span class="progress">
+                            <- ->
+                        </span>
+                        <div class="seek-bar-container flex item-center pointer">
+                            <div class="bar seek-bar">
+                                <div class="seek-circle"></div>
+                                <div class="seek"></div>
+                            </div>
+                        </div>
+                        <span class="duration">
+                            <- ->
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="vol-control flex">
+                    <div class="volume-button flex item-center">
+                        <button type="button" title="vol" class="control-btn flex item-center vol-control-btn">
+                            <img src="../assets/volume.svg" alt="" class="invert icon-width-2 control-icon">
+                        </button>
+                        <div class="vol-status">
+                            <div class="range flex item-center">
+                                <input title="Volume" type="range" name="volume" id="vol" min="0" max="100" value="100"
+                                    class="slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
